@@ -3,7 +3,7 @@ Simple Network Speed Test
 Description: This script will create a dummy file, default size of 1GB, and copy to and from a target server.  The Mbps will be determined from the time it 
 takes to perform this operation.
 Author : Fazmin Nizam
-Example: .\Network-Speed-Test.ps1 -path \\engfilew...\<folder name> -Size 300 -Verbose
+Example: .\Network-SpeedTest.ps1 -path \\engfilew...\<folder name> -Size 300 -Verbose
 #>
 #requires powershell -Version 3.0
 [CmdletBinding()]
