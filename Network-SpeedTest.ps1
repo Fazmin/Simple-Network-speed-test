@@ -1,5 +1,5 @@
 ﻿<#
-Simple Network speed test 
+Simple Network Speed Test 
 Description: This script will create a dummy file, default size of 1GB, and copy to and from a target server.  The Mbps will be determined from the time it 
 takes to perform this operation.
 Author : Fazmin Nizam
@@ -11,11 +11,12 @@ Param (
     [Parameter(Mandatory,ValueFromPipeline,HelpMessage="Enter UNC's to server to test (A data file will be created)")]
     [String[]]$Path,
     [ValidateRange(1,1000)]
+    # Default is set to 1GB
     [int]$Size = 1000
 )
 
 Begin {
-    Write-Verbose "$(Get-Date): Test-NetworkSpeed Script begins"
+    Write-Verbose "$(Get-Date): Network-SpeedTest Script begins"
     Write-Verbose "$(Get-Date): Create dummy data file, Size: $($Size)MB"
     $Source = $PSScriptRoot
     Remove-Item $Source\Testdata.txt -ErrorAction SilentlyContinue
@@ -99,5 +100,5 @@ Process {
 
 End {
     Remove-Item $Source\Testdata.txt -ErrorAction SilentlyContinue
-    Write-Verbose "$(Get-Date): Test-NetworkSpeed completed!"
+    Write-Verbose "$(Get-Date): Network-SpeedTest completed!"
 }
