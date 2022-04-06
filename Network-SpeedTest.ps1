@@ -3,12 +3,12 @@ Simple Network speed test
 Description: This script will create a dummy file, default size of 1GB, and copy to and from a target server.  The Mbps will be determined from the time it 
 takes to perform this operation.
 Author : Fazmin Nizam
-Example: .\Network-Speed-Test.ps1 -path \\engfilew...\<folder name> -Size 200 -Verbose
+Example: .\Network-Speed-Test.ps1 -path \\engfilew...\<folder name> -Size 300 -Verbose
 #>
 #requires powershell -Version 3.0
 [CmdletBinding()]
 Param (
-    [Parameter(Mandatory,ValueFromPipeline,HelpMessage="Enter UNC's to server to test (dummy file will be saved in this path)")]
+    [Parameter(Mandatory,ValueFromPipeline,HelpMessage="Enter UNC's to server to test (A data file will be created)")]
     [String[]]$Path,
     [ValidateRange(1,1000)]
     [int]$Size = 1000
