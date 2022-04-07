@@ -16,6 +16,7 @@ Param (
 )
 
 Begin {
+    #Creating the testdata file
     Write-Verbose "$(Get-Date): Network-SpeedTest Script begins"
     Write-Verbose "$(Get-Date): Create dummy data file, Size: $($Size)MB"
     $Source = $PSScriptRoot
@@ -63,6 +64,7 @@ Process {
             }
         }
         
+        # Read write test
         Try {
             Write-Verbose "$(Get-Date): Write Test..."
             $WriteTest = Measure-Command { 
