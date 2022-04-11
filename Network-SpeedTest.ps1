@@ -1,5 +1,5 @@
 ﻿<#
-Simple Network Speed Test 
+Simple Network Speed Test v.1.1
 Description: This script will create a dummy file, default size of 1GB, and copy to and from a target server.  The Mbps will be determined from the time it 
 takes to perform this operation.
 Author : Fazmin Nizam
