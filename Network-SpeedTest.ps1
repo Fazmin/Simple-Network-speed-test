@@ -4,8 +4,8 @@ Description: This script will create a dummy file, default size of 1GB, and copy
 takes to perform this operation.
 Author : Fazmin Nizam
 Example: .\Network-SpeedTest.ps1 -path \\engfilew...\<folder name> -Size 300 -Verbose
+requires powershell -Version 3.0 or higher
 #>
-#requires powershell -Version 3.0
 [CmdletBinding()]
 Param (
     [Parameter(Mandatory,ValueFromPipeline,HelpMessage="Enter UNC's to server to test (A data file will be created)")]
@@ -66,12 +66,12 @@ Process {
         
         # Read write test
         Try {
-            Write-Verbose "$(Get-Date): Write Test..."
+            Write-Verbose "$(Get-Date): Write Test in progress..."
             $WriteTest = Measure-Command { 
                 Copy-Item $Source\Testdata.txt $Target -ErrorAction Stop
             }
             
-            Write-Verbose "$(Get-Date): Read Test..."
+            Write-Verbose "$(Get-Date): Read Test in progress..."
             $ReadTest = Measure-Command {
                 Copy-Item $Target\Testdata.txt $Source\TestRead.txt -ErrorAction Stop
             }
