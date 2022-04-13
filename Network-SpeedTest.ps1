@@ -6,6 +6,7 @@ Author : Fazmin Nizam
 Example: .\Network-SpeedTest.ps1 -path \\engfilew...\<folder name> -Size 300 -Verbose
 requires powershell -Version 3.0 or higher
 #>
+
 [CmdletBinding()]
 Param (
     [Parameter(Mandatory,ValueFromPipeline,HelpMessage="Enter UNC's to server to test (A data file will be created)")]
