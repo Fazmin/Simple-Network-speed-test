@@ -21,6 +21,7 @@ Begin {
     Write-Verbose "$(Get-Date): Network-SpeedTest Script begins"
     Write-Verbose "$(Get-Date): Create dummy data file, Size: $($Size)MB"
     $Source = $PSScriptRoot
+    #If old testdata file exist remove file
     Remove-Item $Source\Testdata.txt -ErrorAction SilentlyContinue
     Set-Location $Source
     $DummySize = $Size * 1048576
